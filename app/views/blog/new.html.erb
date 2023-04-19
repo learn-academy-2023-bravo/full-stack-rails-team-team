@@ -1,0 +1,15 @@
+<h1>New Entry</h1>
+<h3>Add a New Exercise Session</h3>
+<%= form_with model: @blog do |form| %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <br>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+
+  <br>
+  <%= form.submit 'Add Blog' %>
+<% end %>
+<%= link_to 'Return to Blog List', blogs_path%>
