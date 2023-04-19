@@ -18,6 +18,12 @@ class BlogController < ApplicationController
     end
   end
 
+  def delete
+    @blog = Blog.destroy(params[:id])
+
+    redirect_to blogs_path
+  end
+
   private
   def blog_params
     params.require(:blog).permit(:title, :content)
