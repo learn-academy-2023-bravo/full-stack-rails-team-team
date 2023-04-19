@@ -1,6 +1,7 @@
-<h1>New Entry</h1>
+<h1>Edit Entry</h1>
 
-<%= form_with model: @blog do |form| %>
+
+<%= form_with model: @blog, method: :patch do |form| %>
 
   <%= form.label :title %>
   <%= form.text_field :title %>
@@ -10,6 +11,10 @@
   <%= form.text_field :content %>
 
   <br>
-  <%= form.submit 'Add Blog' %>
+  <%= form.submit 'Update Blog' %>
 <% end %>
+
+
+
+
 <%= link_to 'Return to Blog List', blogs_path%>
