@@ -1,5 +1,7 @@
 <h1>New Entry</h1>
 
+<%= @blog.errors.any? %>
+
 <%= form_with model: @blog do |form| %>
 
   <%= form.label :title %>
@@ -12,4 +14,4 @@
   <br>
   <%= form.submit 'Add Blog' %>
 <% end %>
-<%= link_to 'Return to Blog List', blogs_path%>
+

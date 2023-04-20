@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Blog App", blogs_path %>
+      <%= link_to "New blog", new_blog_path %>
+    </nav>
+<% flash.each do |name, msg| %>
+     <%= msg %>
+   <% end %>
     <%= yield %>
   </body>
 </html>

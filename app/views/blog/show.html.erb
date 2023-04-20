@@ -1,7 +1,6 @@
 <h1>Blog entry</h1>
 <h2><%= @blog.title%></h2>
 <p><%= @blog.content%></p>
-<%= link_to 'Return to Blog List', blogs_path%>
 <%= link_to 'Edit Blog', edit_blog_path%>
 <%= button_to 'Delete blog', @blog, :method => :delete %>
 

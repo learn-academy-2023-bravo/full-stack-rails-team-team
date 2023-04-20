@@ -14,7 +14,10 @@ class BlogController < ApplicationController
   def create
     @blog = Blog.create(blog_params)
     if @blog.valid?
+      flash[:notice] = "SAVED"
       redirect_to blogs_path
+    else
+      puts @blog.errors.any?
     end
   end
 
